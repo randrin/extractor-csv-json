@@ -7,8 +7,8 @@ import * as fs from 'fs';
 import * as csv from 'csv-parser';
 
 async function bootstrap() {
-  const specialityFilter = 'Chirurgo oncologo'; // 👈 Change this to your desired speciality name
-  const speciality_id = '681b0442ba2fa557807aa25f'; // 👈 Change this to your desired speciality id
+  const specialityFilter = 'Oculista'; // 👈 Change this to your desired speciality name
+  const speciality_id = '681b0442ba2fa557807aa298'; // 👈 Change this to your desired speciality id
   const testNames = new Set();
   const filePath = join(process.cwd(), 'src', 'source', 'test_specialties.csv');
 
@@ -38,7 +38,7 @@ async function bootstrap() {
         label: name,
         color: getRandomHexColor(),
         duration: getRandomDuration(),
-        speciality_id: `ObjectId('${speciality_id}')`,
+        speciality_id: `${speciality_id}`,
         createdAt: new Date(),
         updatedAt: new Date(),
       }));
